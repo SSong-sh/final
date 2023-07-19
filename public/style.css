@@ -1,0 +1,12 @@
+@import "/public/reset.css";
+@import "/public/components/nav.css";
+@import "/public/components/item.css";
+@import "/public/components/more.css";
+
+@import "/public/screens/main.css";
+@import "/public/screens/about.css";
+
+.main-scroll {
+  background-color: antiquewhite;
+  height: 1000vh;
+}

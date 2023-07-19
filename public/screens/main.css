@@ -1,0 +1,39 @@
+.main_img {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.main-screen {
+  position: relative;
+}
+
+.main_text {
+  display: flex;
+}
+
+.main_text_title {
+  position: absolute; /* 수정: position을 absolute로 변경 */
+  top: 40%; /* 수정: 부모 요소의 중간 위치로 설정 */
+  left: 50%; /* 수정: 부모 요소의 중간 위치로 설정 */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* 수정: 가운데 정렬을 위해 translate 적용 */
+  color: white;
+  font-size: 80px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.main_text_content {
+  position: absolute; /* 수정: position을 absolute로 변경 */
+  top: 50%; /* 수정: 부모 요소의 중간 위치로 설정 */
+  left: 50%; /* 수정: 부모 요소의 중간 위치로 설정 */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* 수정: 가운데 정렬을 위해 translate 적용 */
+  color: white;
+  font-size: 20px;
+  white-space: nowrap;
+}
