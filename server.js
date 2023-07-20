@@ -16,3 +16,7 @@ app.get("/", function (req, res) {
 app.get("/tech", function (req, res) {
   res.render("tech.ejs");
 });
+
+app.get("/about", function (req, res) {
+  res.render("about.ejs");
+});

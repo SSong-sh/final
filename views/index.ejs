@@ -23,11 +23,11 @@
           </div>
         </div>
       </div>
-      <div class="main-scroll">
+      <div class="main-scroll sub-scroll">
         <div class="more-screen">
           <div class="tech-screen">
             <div class="more">
-              <a class="more_link" href="#">
+              <a class="more_link" href="/tech">
                 <h2 class="more_title">TECH FIELD</h2>
                 <div class="more_icon">
                   <i class="fas fa-arrow-right"></i>
@@ -187,12 +187,29 @@
       </footer>
     </div>
   </body>
-
   <script
     src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"
   ></script>
+  <script>
+    $(document).ready(function () {
+      $(".navbar").on("mouseenter", function () {
+        // .navbar 배경색을 흰색(#FFF)으로 변경
+        $(".navbar").css("background-color", "white");
+        // .navbar 내부에 있는 모든 요소들의 텍스트 색상을 검정색(#000)으로 변경
+        $(".navbar *").css("color", "black");
+      });
+
+      $(".navbar").on("mouseleave", function () {
+        // 마우스가 떠날 때 원래 배경색으로 변경
+        $(".navbar").css("background-color", "");
+        // 마우스가 떠날 때 원래 텍스트 색상으로 변경
+        $(".navbar *").css("color", "");
+      });
+    });
+  </script>
+
   <script
     src="https://kit.fontawesome.com/4b3c3b390b.js"
     crossorigin="anonymous"

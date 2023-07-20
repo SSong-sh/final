@@ -4,29 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="stylesheet" href="/public/substyle.css" />
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar-left">
-        <a href="#" class="navbar-logo">졸업작품</a>
-      </div>
-      <ul class="navbar-menu">
-        <div class="navbar_list">
-          <li><a href="#">TECH</a></li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">SOLAR MAP</a></li>
-          <li><a href="#">SERVICE</a></li>
+    <%- include("nav.html") %>
+    <div class="wrap">
+      <div class="main-scroll">
+        <div class="more-screen">
+          <div class="tech-screen">
+            <div class="more">
+              <a class="more_link" href="#">
+                <h2 class="more_title">TECH FIELD</h2>
+                <div class="more_icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
+              <div class="more_info">
+                <p>
+                  다양한 분야의 연구를 통해 <br />
+                  새로운 문화를 창조하는 AI CENTER
+                </p>
+              </div>
+              <div class="tech-wrapper">
+                <div class="field_item">
+                  <div class="field_item_bg">
+                    <img src="/public/item01.jpg" />
+                  </div>
+                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
+                </div>
+                <div class="field_item">
+                  <div class="field_item_bg">
+                    <img src="/public/item01.jpg" />
+                  </div>
+                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
+                </div>
+                <div class="field_item">
+                  <div class="field_item_bg">
+                    <img src="/public/item01.jpg" />
+                  </div>
+                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
+                </div>
+                <div class="field_item">
+                  <div class="field_item_bg">
+                    <img src="/public/item01.jpg" />
+                  </div>
+                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
+                </div>
+                <div class="field_item">
+                  <div class="field_item_bg">
+                    <img src="/public/item01.jpg" />
+                  </div>
+                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </ul>
-      <div class="navbar-right">
-        <button class="new-button">
-          <i class="fas fa-bars"></i>
-        </button>
       </div>
-    </nav>
-    안녕하세요
+
+      <footer>
+        <div class="footer-screen">
+          <div class="footer-info">
+            <div class="member">
+              <span>장성호</span>
+              <span>김채현</span>
+              <span>송성혜</span>
+              <span>전태림</span>
+            </div>
+            <div class="location">
+              경기도 시흥시 산기대학로 237 한국공학대학교
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 
   <script
