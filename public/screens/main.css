@@ -1,6 +1,14 @@
+.main-scroll {
+  border-radius: 100px 0px 100px 0px; /* 둥글게 할 반지름 값을 조정해보세요 */
+  display: block; /* 블록 요소로 설정 */
+  height: 350vh; /* 임시 높이 값 추가 */
+  background-color: rgb(157, 179, 238);
+}
+
 .main_img {
   background-size: cover;
   overflow: hidden;
+  height: 100%;
 }
 
 .main-screen {
