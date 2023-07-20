@@ -4,59 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/public/substyle.css" />
+    <link rel="stylesheet" href="/public/mapstyle.css" />
     <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=48c6f5e4edb390d377fc3cf7623ea78e"
+    ></script>
   </head>
   <body>
     <%- include("nav.html") %>
+
     <div class="wrap">
       <div class="main-scroll">
         <div class="more-screen">
           <div class="tech-screen">
             <div class="more">
-              <a class="more_link" href="#">
-                <h2 class="more_title">TECH FIELD</h2>
-                <div class="more_icon">
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </a>
+              <h2 class="more_title">SORAL MAP FIELD</h2>
+
               <div class="more_info">
-                <p>
-                  다양한 분야의 연구를 통해 <br />
-                  새로운 문화를 창조하는 AI CENTER
-                </p>
+                <p>여기에는 solar map 소개하는 한줄 쓸 거임</p>
               </div>
-              <div class="tech-wrapper">
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
+              <div class="map-wrapper">
+                <div id="map" style="width: 800px; height: 500px"></div>
+                <div id="clickLatlng"></div>
+                <form id="search-form">
+                  <input
+                    type="text"
+                    id="address-input"
+                    placeholder="주소를 입력하세요"
+                  />
+                  <button type="submit">검색</button>
+                </form>
               </div>
             </div>
           </div>
@@ -79,6 +57,51 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+      var options = {
+        //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(37.3402588, 126.7335448), //지도의 중심좌표.
+        level: 3, //지도의 레벨(확대, 축소 정도)
+        // disableClickZoom: true // 클러스터 마커를 클릭했을 때 지도가 확대되지 않도록 설정한다
+      };
+
+      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+      // 마커가 표시될 위치입니다
+      var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+
+      // 마커가 지도 위에 표시되도록 설정합니다
+      marker.setMap(map);
+
+      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+      // marker.setMap(null);
+
+      // 지도에 클릭 이벤트를 등록합니다
+      // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
+      kakao.maps.event.addListener(map, "click", function (mouseEvent) {
+        // 클릭한 위도, 경도 정보를 가져옵니다
+        var latlng = mouseEvent.latLng;
+
+        // 마커 위치를 클릭한 위치로 옮깁니다
+        marker.setPosition(latlng);
+
+        // 마우스로 클릭한 위치의 위도와 경도를 표시할 메세지
+        var message = "클릭한 위치의 위도는 " + latlng.getLat() + " 이고, ";
+        message += "경도는 " + latlng.getLng() + " 입니다";
+
+        // 'clickLatlng'라는 아이디값을 가진 <div> 태그의 innerHTML 으로 위 메세지를 설정합니다.
+        var resultDiv = document.getElementById("clickLatlng");
+        resultDiv.innerHTML = message;
+      });
+    </script>
+    <script></script>
   </body>
 
   <script

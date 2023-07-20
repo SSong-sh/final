@@ -22,9 +22,9 @@ app.get("/about", function (req, res) {
 });
 
 app.get("/map", function (req, res) {
-  res.render("about.ejs");
+  res.render("map.ejs");
 });
 
 app.get("/contact", function (req, res) {
-  res.render("about.ejs");
+  res.render("contact.ejs");
 });

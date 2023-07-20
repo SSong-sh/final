@@ -69,14 +69,6 @@
 }
 
 /* item */
-.about-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 80px;
-}
 
 .field_item {
   display: flex;
@@ -88,8 +80,8 @@
 }
 
 .field_item img {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   border-radius: 30px;
 }
 
