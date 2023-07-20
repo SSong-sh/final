@@ -5,8 +5,6 @@
 
 @import "/public/screens/main.css";
 @import "/public/screens/about.css";
+@import "/public/screens/contact.css";
 
-.main-scroll {
-  background-color: antiquewhite;
-  height: 1000vh;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
