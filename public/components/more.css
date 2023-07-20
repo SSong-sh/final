@@ -10,7 +10,6 @@
 .more_link {
   display: flex;
   flex-direction: row;
-
   font-size: 30px;
   text-decoration: none;
   color: white;
