@@ -20,3 +20,11 @@ app.get("/tech", function (req, res) {
 app.get("/about", function (req, res) {
   res.render("about.ejs");
 });
+
+app.get("/map", function (req, res) {
+  res.render("about.ejs");
+});
+
+app.get("/contact", function (req, res) {
+  res.render("about.ejs");
+});
