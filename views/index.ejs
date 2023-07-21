@@ -12,7 +12,7 @@
     <div class="wrap">
       <div class="main-screen">
         <div class="main_img">
-          <img src="/public/bg01 (2).jpg" />
+          <img src="/public/energy2.jpg" />
         </div>
         <div class="main_text">
           <div class="main_text_title">
@@ -206,6 +206,20 @@
         $(".navbar").css("background-color", "");
         // 마우스가 떠날 때 원래 텍스트 색상으로 변경
         $(".navbar *").css("color", "");
+      });
+
+      // 윈도우의 스크롤 이벤트를 처리하는 함수
+      $(window).scroll(function () {
+        // 현재 스크롤 위치를 가져옴
+        var scrollY = window.scrollY || window.pageYOffset;
+
+        // 스크롤 위치가 1보다 크면 .navbar 배경색을 검정색(#000)으로 변경
+        if (scrollY > 1) {
+          $(".navbar").css("background-color", "black");
+        } else {
+          // 스크롤 위치가 1 이하이면 .navbar 배경색을 투명하게 처리 (기존 상태로 되돌림)
+          $(".navbar").css("background-color", "");
+        }
       });
     });
   </script>

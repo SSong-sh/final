@@ -5,10 +5,9 @@
   background-color: rgb(157, 179, 238);
 }
 
-.main_img {
-  background-size: cover;
-  overflow: hidden;
-  height: 100%;
+.main_img img {
+  width: 100%; /* 이미지의 가로 크기를 화면 너비에 맞게 조절합니다. */
+  height: auto; /* 이미지의 세로 크기는 자동으로 비율에 맞게 조절됩니다. */
 }
 
 .main-screen {
@@ -21,7 +20,7 @@
 
 .main_text_title {
   position: absolute; /* 수정: position을 absolute로 변경 */
-  top: 40%; /* 수정: 부모 요소의 중간 위치로 설정 */
+  top: 30%; /* 수정: 부모 요소의 중간 위치로 설정 */
   left: 50%; /* 수정: 부모 요소의 중간 위치로 설정 */
   transform: translate(
     -50%,
@@ -31,11 +30,12 @@
   font-size: 80px;
   font-weight: 600;
   white-space: nowrap;
+  text-shadow: 1px 5px 5px rgb(29, 84, 105);
 }
 
 .main_text_content {
   position: absolute; /* 수정: position을 absolute로 변경 */
-  top: 50%; /* 수정: 부모 요소의 중간 위치로 설정 */
+  top: 40%; /* 수정: 부모 요소의 중간 위치로 설정 */
   left: 50%; /* 수정: 부모 요소의 중간 위치로 설정 */
   transform: translate(
     -50%,
@@ -44,4 +44,5 @@
   color: white;
   font-size: 20px;
   white-space: nowrap;
+  text-shadow: 2px 2px 2px black;
 }

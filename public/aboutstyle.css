@@ -1,5 +1,11 @@
 @import "/public/reset.css";
 
+@import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+body {
+  font-family: "NexonLv1Gothic";
+}
+
 .navbar {
   display: flex;
   position: fixed;
