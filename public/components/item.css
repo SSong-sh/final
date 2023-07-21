@@ -23,6 +23,3 @@
 .field_item:last-child {
   margin-right: 0; /* 마지막 요소의 오른쪽 여백 제거 */
 }
-.tech-more .tech-wrapper {
-  width: 100%;
-}
