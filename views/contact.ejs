@@ -4,59 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/public/substyle.css" />
+    <link rel="stylesheet" href="/public/mapstyle.css" />
     <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=48c6f5e4edb390d377fc3cf7623ea78e"
+    ></script>
   </head>
   <body>
     <%- include("nav.html") %>
+
     <div class="wrap">
       <div class="main-scroll">
         <div class="more-screen">
           <div class="tech-screen">
             <div class="more">
-              <a class="more_link" href="#">
-                <h2 class="more_title">TECH FIELD</h2>
-                <div class="more_icon">
-                  <i class="fas fa-arrow-right"></i>
-                </div>
-              </a>
+              <h2 class="more_title">contact FIELD</h2>
+
               <div class="more_info">
                 <p>
-                  다양한 분야의 연구를 통해 <br />
-                  새로운 문화를 창조하는 AI CENTER
+                  최적화를 확인하기 위해 아래 양식에 맞춰 이메일을 보내주세요
                 </p>
               </div>
-              <div class="tech-wrapper">
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
-                <div class="field_item">
-                  <div class="field_item_bg">
-                    <img src="/public/item01.jpg" />
-                  </div>
-                  <div class="field_item_title">MARKETING INTELLIGENCE</div>
-                </div>
+              <div class="map-wrapper">
+                <div id="map" style="width: 800px; height: 500px"></div>
+                <div id="clickLatlng"></div>
               </div>
             </div>
           </div>
