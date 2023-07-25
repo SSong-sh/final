@@ -12,7 +12,7 @@
   height: 140px;
   width: 600px;
   display: block; /* 버튼을 블록 요소로 만듦 */
-  border-top: 2px solid white; /* 2px 두께의 검은색 테두리 위쪽에 추가 */
+  border-top: 2px solid rgba(255, 255, 255, 0.471); /* 2px 두께의 검은색 테두리 위쪽에 추가 */
   display: flex;
   align-items: center;
 }
@@ -22,23 +22,20 @@
   font-size: 30px;
 }
 
-.about_itme-info {
+.about-itme-info {
   font-size: 20px;
   line-height: 1.2;
 }
 .about-item_title {
   font-size: 25px;
 }
-.about-content {
-  display: flex;
-  justify-content: space-between;
-}
 
 .content-inner {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-left: 50px;
+  width: 400px; /* 원하는 너비를 여기에 설정합니다 */
+  flex-shrink: 0; /* flex 요소가 줄어들지 않도록 설정 */
 }
 .content-inner_img img {
   background-color: white;
